@@ -62,14 +62,49 @@
   </button>
 </div>
   <div id="products" class=" row justify-content-center min-vh-100" style="padding-top: 100px">
-    <div class="row col-9  ">
-      <div class="col-4"></div>
-      <div class="col-8 row">
-        <div class="col-4">
-          <p>قهوه فوری</p>
+    <div class="row col-10  ">
+      <div class="col-5"></div>
+      <div class="row mb-5 px-4 col-7">
+        <div class="col-4 d-grid">
+          <p class="align-self-end m-0">قهوه فوری</p>
         </div>
-        <div class="col-8 d-flex justify-content-between">
-          <div v-for="(index,item) in 5" :key="index" class="category" :class="{'my-bg': index == 1} "  ><i class="bi bi-cup-hot"></i></div>
+        <div class="col-8 p-0 d-flex justify-content-between">
+          <div v-for="(index,item) in 5" :key="index" class="category "  style="padding:3px; border: 1px #004400 solid" >
+            <div :class="{'my-bg': index == 1} " class="w-100 h-100 rounded " style=" background-color: #e2e2e2">
+              <i class="bi bi-cup-hot"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="card border-0 rounded-4">
+          <div class="card-body">
+            <div class="card-img mb-3">
+              <img src="/img/cc.webp" class="img-fluid" alt="">
+            </div>
+            <div class="card-title">
+              <p>قهوه فوری</p>
+              <small>بسته 500 گرمی</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-7">
+        <div class="row">
+          <div v-for="item in 6" class="col-4 px-4 mb-4">
+            <div class="card rounded-4">
+              <div class="card-body">
+                <div class="card-img mb-3">
+                  <img src="/img/cc.webp" class="img-fluid" alt="">
+                </div>
+                <div class="card-title">
+                  <p>قهوه فوری</p>
+                  <small>بسته 500 گرمی</small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
