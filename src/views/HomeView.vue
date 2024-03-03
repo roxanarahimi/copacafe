@@ -3,8 +3,7 @@
     <nav class="navbar navbar-expand-lg  pt-4">
       <div class="container-fluid">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse pt-4" id="navbarScroll">
@@ -31,27 +30,25 @@
       </div>
     </nav>
   </div>
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-pause="false"
-       style="height: calc(100vh - 103px); margin-top:103px;">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-pause="false" style="height: calc(100vh - 103px); margin-top:103px;">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     </div>
     <div class="carousel-inner h-100">
       <div class="carousel-item px-3 active h-100" data-bs-interval="3000">
         <div class="row justify-content-center h-100">
           <div class="col-10 h-100 d-grid" style="">
-            <div class="row align-self-center">
-              <div class="col-5 d-grid">
-                <div class="carousel-text align-self-end my-color fw-bolder">
+            <div class="row align-self-center flex-row-reverse">
+              <div class="col-lg-7">
+                <img src="/img/slide1.png" class="img-fluid" alt="">
+              </div><div class="col-lg-5 d-grid">
+                <div class="carousel-text align-self-end my-color fw-bolder mt-4">
                   <p class="">کوپاکافه</p>
                   <p>طعم واقعی قهوه</p>
                 </div>
               </div>
-              <div class="col-7">
-                <img src="/img/slide1.png" class="img-fluid" alt="">
-              </div>
+
             </div>
           </div>
         </div>
@@ -60,23 +57,21 @@
       <div class="carousel-item px-3 h-100" data-bs-interval="3000">
         <div class="row justify-content-center h-100">
           <div class="col-10 h-100 d-grid" style="">
-            <div class="row align-self-center">
-              <div class="col-5 d-grid">
-                <div class="carousel-text align-self-end my-color fw-bolder">
-                  <p class="">کوپاکافه</p>
-                  <p>دنیای تنوع و کیفیت</p>
-                </div>
-              </div>
-              <div class="col-7">
+            <div class="row align-self-center flex-row-reverse">
+              <div class="col-lg-7">
                 <img src="/img/slide2.png" class="img-fluid" alt="">
+              </div><div class="col-lg-5 d-grid">
+              <div class="carousel-text align-self-end my-color fw-bolder mt-4">
+                <p class="">کوپاکافه</p>
+                <p>دنیای تنوع و کیفیت</p>
               </div>
+            </div>
+
             </div>
           </div>
         </div>
 
       </div>
-
-
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -96,20 +91,57 @@
 
     </div>
     <div class="row col-10  ">
-      <div class="col-5"></div>
-      <div class="row mb-5 px-4 col-7">
-        <div class="col-4 d-grid">
-          <p class="align-self-end m-0">قهوه فوری</p>
-        </div>
-        <div class="col-8 p-0 d-flex justify-content-between">
+      <div class="d-none d-lg-block col-5"></div>
+      <div class="row mb-5 px-2 col-lg-7 flex-row-reverse">
+        <div class="col-lg-8 p-0 d-flex justify-content-between mb-4 mb-lg-0">
           <div v-for="(index,item) in 5" :key="index" class="category " style="padding:3px; border: 1px #004400 solid">
             <div :class="{'my-bg': index == 1} " class="w-100 h-100 rounded " style=" background-color: #e2e2e2">
               <i class="bi bi-cup-hot"></i>
             </div>
           </div>
         </div>
+        <div class="col-lg-4 d-grid">
+        <p class="align-self-end m-0 ms-3">قهوه فوری</p>
       </div>
-      <div class="col-5">
+
+      </div>
+
+      <div class="row flex-row-reverse">
+        <div class="col-lg-7">
+          <div class="row d-none d-lg-block">
+            <div v-for="item in 6" class="col-4 px-3 mb-4">
+              <div class="card rounded-4">
+                <div class="card-body pt-5">
+                  <div class="card-img mb-3">
+                    <img src="/img/cc.webp" class="img-fluid" alt="">
+                  </div>
+                  <div class="card-title">
+                    <p>قهوه فوری</p>
+                    <small>بسته 500 گرمی</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         <div class=" d-lg-none w-100" style=" overflow-x: scroll">
+           <div class="d-flex" style="min-width: 100%;">
+             <div v-for="item in 6" class=" col-6 px-2 mb-3" style="width: 180px !important">
+               <div class="card rounded-3 w-100">
+                 <div class="card-body pt-4">
+                   <div class="card-img mb-3">
+                     <img src="/img/cc.webp" class="img-fluid" alt="">
+                   </div>
+                   <div class="card-title">
+                     <p>قهوه فوری</p>
+                     <small>بسته 500 گرمی</small>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+        </div>
+        <div class="col-lg-5">
         <div class="card border-0 rounded-4">
           <div class="card-body">
             <div class="card-img mb-3">
@@ -123,32 +155,21 @@
         </div>
 
       </div>
-      <div class="col-7">
-        <div class="row">
-          <div v-for="item in 6" class="col-4 px-3 mb-4">
-            <div class="card rounded-4">
-              <div class="card-body pt-5">
-                <div class="card-img mb-3">
-                  <img src="/img/cc.webp" class="img-fluid" alt="">
-                </div>
-                <div class="card-title">
-                  <p>قهوه فوری</p>
-                  <small>بسته 500 گرمی</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
+
   </div>
   <div class=" py-5 my-bg " style="margin-top: 100px; margin-bottom: 150px">
     <div class="row d-grid">
-      <div class="col-10 row align-self-center mx-auto">
-        <div class="col-6 d-grid">
+      <div class="col-10 row align-self-center mx-auto flex-row-reverse">
+        <div class="col-lg-6">
+          <img src="/img/make.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 d-grid">
           <div class="align-self-end">
             <h3 class="text-center my-5">راهنمای دم آوری قهوه</h3>
-            <p class="text-justify px-5">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+            <p class="text-justify px-lg-5">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
               طراحان گرافیک است، چاپگرها و
               متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
               کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،
@@ -161,9 +182,6 @@
               حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
           </div>
         </div>
-        <div class="col-6">
-          <img src="/img/make.png" class="img-fluid" alt="">
-        </div>
       </div>
     </div>
 
@@ -171,13 +189,13 @@
   <div class=" my-5">
     <div class="row d-grid">
       <div class="col-10 row align-self-center mx-auto">
-        <div class="col-6">
+        <div class="col-lg-6">
           <img src="/img/bigcup.png" class="img-fluid" alt="">
         </div>
-        <div class="col-6 d-grid">
+        <div class="col-lg-6 d-grid">
           <div class="align-self-end">
             <h3 class="text-center my-5">درباره کوپاکافه</h3>
-            <p class="text-justify px-5">
+            <p class="text-justify px-lg-5">
               تکنولوژی مورد نیاز، و
               کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،
               شناخت فراوان جامعه و متخصصان را می طلبد، تاان فارسی ایجاد کرد، در این صورت می توان امید
@@ -213,10 +231,10 @@
                 جزو اولین محصولات تولید شده توسط الیت می‌باشند. محصولات ترین استاندارد های مواد غذایی دنیا تولید می‌شود.
               </small>
             </div>
-            <div class="col-sm-6 col-xl-7 px-3" style="margin-top: 80px">
+            <div class="col-sm-6 col-xl-7 px-lg-3" style="margin-top: 80px">
             <p class="text-center mb-4"><b>تماس با ما</b></p>
 
-            <ul>
+            <ul class="p-0">
               <li class="d-flex mb-3">
             <span class="me-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt"
@@ -272,12 +290,19 @@
           </div>
             </div>
           <div class="col-sm-5 col-xl-5 px-3 d-grid">
-            <div class="d-flex justify-content-between align-self-end">
-
+            <div class="d-flex justify-content-between align-self-end d-none d-lg-block">
               <div><img src="/img/c1.png"  class="footer-img" alt=""></div>
               <div><img src="/img/c2.png"  class="footer-img" alt=""></div>
               <div><img src="/img/c4.png"  class="footer-img" alt=""></div>
               <div><img src="/img/c3.png"  class="footer-img" alt=""></div>
+            </div>
+            <div class="d-lg-none d-flex">
+              <div class="p-2"><img src="/img/c1.png"  class="footer-img " alt=""></div>
+              <div class="p-2"><img src="/img/c4.png"  class="footer-img " alt=""></div>
+              </div>
+            <div class="d-lg-none d-flex">
+            <div class="p-2"><img src="/img/c2.png"  class="footer-img " alt=""></div>
+              <div class="p-2"><img src="/img/c3.png"  class="footer-img " alt=""></div>
             </div>
           </div>
         </div>
