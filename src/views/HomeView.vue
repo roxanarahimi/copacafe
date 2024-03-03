@@ -87,7 +87,14 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <div id="products" class=" row justify-content-center min-vh-100" style="padding-top: 100px">
+  <div id="products" class=" row justify-content-center min-vh-100" style="padding-top: 70px">
+
+    <div class="text-center mb-5">
+      <div class="rounded-3 d-inline-block p-1" style="border: 1px solid #004400">
+        <h1 class="my-bg d-inline-block mx-auto p-4 rounded-3 mb-0">محصولات کوپاکافه</h1>
+      </div>
+
+    </div>
     <div class="row col-10  ">
       <div class="col-5"></div>
       <div class="row mb-5 px-4 col-7">
@@ -135,7 +142,7 @@
       </div>
     </div>
   </div>
-  <div class="my-5 py-5 my-bg ">
+  <div class=" py-5 my-bg " style="margin-top: 100px; margin-bottom: 150px">
     <div class="row d-grid">
       <div class="col-10 row align-self-center mx-auto">
         <div class="col-6 d-grid">
@@ -190,8 +197,8 @@
     </div>
 
   </div>
-  <footer class="" style="margin-top: 120px !important">
-    <div class="my-bg " style=" background: url('/img/footer.png') top left no-repeat; background-size: 100% ;">
+  <footer class="" style="margin-top: 120px !important; ">
+    <div class="my-bg " style=" background: url('/img/footer.png') top left no-repeat; background-size: 100% ;padding-bottom: 50px">
 
       <div class="px-lg-5" style=" padding-top: 100px">
         <div class="row px-5 ">
