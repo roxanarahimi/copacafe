@@ -39,38 +39,43 @@
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     </div>
     <div class="carousel-inner h-100">
-      <div class="carousel-item active h-100" data-bs-interval="3000">
-        <div class="row d-grid">
-         <div class="col-10 row align-self-center mx-auto">
-           <div class="col-6 d-grid">
-             <div class="align-self-end">
-               <h5>First slide label</h5>
-               <p>Some representative placeholder content for the first slide.</p>
-             </div>
-           </div>
-           <div class="col-6">
-             <img src="/img/slide1.png" class="img-fluid" alt="">
-           </div>
-         </div>
-        </div>
-
-      </div>
-      <div class="carousel-item h-100" data-bs-interval="3000">
-        <div class="row d-grid">
-          <div class="col-10 row align-self-center mx-auto">
-            <div class="col-6 d-grid">
-              <div class="align-self-end">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+      <div class="carousel-item px-3 active h-100" data-bs-interval="3000">
+        <div class="row justify-content-center h-100">
+          <div class="col-10 h-100 d-grid" style="">
+            <div class="row align-self-center">
+              <div class="col-5 d-grid">
+                <div class="carousel-text align-self-end my-color fw-bolder">
+                  <p class="">کوپاکافه</p>
+                  <p>طعم واقعی قهوه</p>
+                </div>
               </div>
-            </div>
-            <div class="col-6">
-              <img src="/img/slide2.png" class="img-fluid" alt="">
+              <div class="col-7">
+                <img src="/img/slide1.png" class="img-fluid" alt="">
+              </div>
             </div>
           </div>
         </div>
 
       </div>
+      <div class="carousel-item px-3 h-100" data-bs-interval="3000">
+        <div class="row justify-content-center h-100">
+          <div class="col-10 h-100 d-grid" style="">
+            <div class="row align-self-center">
+              <div class="col-5 d-grid">
+                <div class="carousel-text align-self-end my-color fw-bolder">
+                  <p class="">کوپاکافه</p>
+                  <p>دنیای تنوع و کیفیت</p>
+                </div>
+              </div>
+              <div class="col-7">
+                <img src="/img/slide2.png" class="img-fluid" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
 
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -130,6 +135,54 @@
       </div>
     </div>
   </div>
+  <div class="my-5 py-5 my-bg ">
+    <div class="row d-grid">
+      <div class="col-10 row align-self-center mx-auto">
+        <div class="col-6 d-grid">
+          <div class="align-self-end">
+            <h3 class="text-center my-5">راهنمای دم آوری قهوه</h3>
+            <p class="text-justify px-5">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و
+              متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و
+              کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده،
+              شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+              الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری
+              موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و
+              جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفادفزارها شناخت بیشتری را برای
+              طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+              داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل
+              حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <img src="/img/make.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class=" my-5">
+    <div class="row d-grid">
+      <div class="col-10 row align-self-center mx-auto">
+        <div class="col-6">
+          <img src="/img/bigcup.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-6 d-grid">
+          <div class="align-self-end">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    <div class="my-bg"
+         style="height: 50vh; background: url('/img/footer.png') top left no-repeat; background-size: 100%">
+
+    </div>
+  </footer>
 </template>
 
 <script>

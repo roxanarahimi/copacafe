@@ -75,3 +75,12 @@ body {
     background-color: #004400 !important;
     color: white !important;
 }
+.my-color{
+    color: #004400 !important;
+}
+.carousel-text{
+    font-size: 50px
+}
+.text-justify{
+    text-align: justify;
+}
