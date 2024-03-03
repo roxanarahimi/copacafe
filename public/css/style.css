@@ -75,6 +75,10 @@ body {
     background-color: #004400 !important;
     color: white !important;
 }
+.my-bg a,.my-bg a:hover{
+    text-decoration: none;
+    color: white !important;
+}
 .my-color{
     color: #004400 !important;
 }
@@ -83,4 +87,22 @@ body {
 }
 .text-justify{
     text-align: justify;
+}
+.footer-img{
+    width: 85%;
+    height: auto;
+
+    cursor:pointer;
+}
+.footer-img:hover{
+    transform: scale(1.2,1.2);
+    opacity: 0.7;
+}
+nav ul li a {
+    text-align: center !important;
+}
+@media (min-width: 992px) {
+    .navbar-brand{
+        margin-top: -40px;
+    }
 }
