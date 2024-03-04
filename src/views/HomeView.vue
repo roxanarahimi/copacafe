@@ -294,7 +294,7 @@
           </div>
             </div>
           <div class="col-sm-5 col-xl-5 px-3 d-grid">
-            <div class="d-flex justify-content-between align-self-end d-none d-lg-block">
+            <div class=" justify-content-between align-self-end d-none d-lg-flex">
               <div><img src="/img/c1.png"  class="footer-img" alt=""></div>
               <div><img src="/img/c2.png"  class="footer-img" alt=""></div>
               <div><img src="/img/c4.png"  class="footer-img" alt=""></div>
