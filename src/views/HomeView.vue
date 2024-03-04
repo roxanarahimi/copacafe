@@ -108,7 +108,7 @@
 
       <div class="row flex-row-reverse">
         <div class="col-lg-7">
-          <div class="row d-none d-lg-block">
+          <div class="row  d-none d-lg-flex">
             <div v-for="item in 6" class="col-4 px-3 mb-4">
               <div class="card rounded-4">
                 <div class="card-body pt-5">
