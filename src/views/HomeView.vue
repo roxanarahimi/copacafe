@@ -1,6 +1,6 @@
 <template>
-  <div class=" fixed-top bg-white" style="box-shadow: 0 4px 4px 0 rgba(0,0,0,.03);">
-    <nav class="navbar navbar-expand-lg  pt-4">
+  <div class=" fixed-top  bg-white" style="box-shadow: 0 4px 4px 0 rgba(0,0,0,.03);">
+    <nav class="navbar navbar-expand-lg pt-4">
       <div class="container-fluid">
 
         <div class="navbar-toggler border-0"  data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -35,44 +35,63 @@
     </a>
     </nav>
   </div>
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-pause="false" style="height: calc(100vh - 103px); margin-top:103px;">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel" data-bs-pause="false" style="height: calc(100vh - 103px); margin-top:103px;">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     </div>
     <div class="carousel-inner h-100">
       <div class="carousel-item px-3 active h-100" data-bs-interval="3000">
-        <div class="row justify-content-center h-100">
-          <div class="col-10 h-100 d-grid" style="">
-            <div class="row align-self-center flex-row-reverse">
-              <div class="col-lg-7">
-                <img src="/img/slide1.png" class="img-fluid" alt="">
-              </div><div class="col-lg-5 d-grid">
-                <div class="carousel-text align-self-end my-color fw-bolder mt-4">
-                  <p class="">کوپاکافه</p>
-                  <p>طعم واقعی قهوه</p>
-                </div>
-              </div>
-
+        <div class="row align-self-center d-none d-lg-flex flex-row-reverse h-100">
+          <div class="col-lg-7 h-100 d-grid">
+            <img src="/img/slide1.png" class="img-fluid align-self-center me-auto" alt="">
+          </div>
+          <div class="col-lg-5 h-100 d-grid"  style="background:url('/img/slideBg.png') top right no-repeat; background-size: 100%">
+            <div class="carousel-text align-self-center text-light  fw-bolder mt-4">
+              <p class="ps-4">کوپاکافه</p>
+              <p class="ps-4">طعم واقعی قهوه</p>
             </div>
           </div>
+
         </div>
+        <div class="row align-self-center d-lg-none h-100" style="background:url('/img/slideBg2.png') bottom right no-repeat; background-size: 100%;">
+          <div class="col-12 d-grid">
+            <img src="/img/slide1.png" class="img-fluid align-self-center me-auto" alt="">
+          </div>
+          <div class="col-12 d-grid"  >
+            <div class="carousel-text align-self-end text-light  fw-bolder mt-4 pb-5" style="font-size:35px">
+              <p class="ps-4">کوپاکافه</p>
+              <p class="ps-4">طعم واقعی قهوه</p>
+            </div>
+          </div>
+
+        </div>
+
       </div>
       <div class="carousel-item px-3 h-100" data-bs-interval="3000">
-        <div class="row justify-content-center h-100">
-          <div class="col-10 h-100 d-grid" style="">
-            <div class="row align-self-center flex-row-reverse">
-              <div class="col-lg-7">
-                <img src="/img/slide2.png" class="img-fluid" alt="">
-              </div><div class="col-lg-5 d-grid">
-              <div class="carousel-text align-self-end my-color fw-bolder mt-4">
-                <p class="">کوپاکافه</p>
-                <p>دنیای تنوع و کیفیت</p>
-              </div>
-            </div>
-
+        <div class="row align-self-center d-none d-lg-flex flex-row-reverse h-100">
+          <div class="col-lg-7 h-100 d-grid">
+            <img src="/img/slide2.png" class="img-fluid align-self-center me-auto" alt="">
+          </div>
+          <div class="col-lg-5 h-100 d-grid"  style="background:url('/img/slideBg.png') top right no-repeat; background-size: 100%">
+            <div class="carousel-text align-self-center text-light  fw-bolder mt-4">
+              <p class="ps-4">کوپاکافه</p>
+              <p class="ps-4">دنیای تنوع و کیفیت</p>
             </div>
           </div>
+
+        </div>
+        <div class="row align-self-center d-lg-none h-100" style="background:url('/img/slideBg2.png') bottom right no-repeat; background-size: 100%;">
+          <div class="col-12 d-grid">
+            <img src="/img/slide1.png" class="img-fluid align-self-center me-auto" alt="">
+          </div>
+          <div class="col-12 d-grid"  >
+            <div class="carousel-text align-self-end text-light  fw-bolder mt-4 pb-5" style="font-size:35px">
+              <p class="ps-4">کوپاکافه</p>
+              <p class="ps-4">دنیای تنوع و کیفیت</p>
+            </div>
+          </div>
+
         </div>
 
       </div>
