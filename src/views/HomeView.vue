@@ -302,11 +302,11 @@
             </div>
             <div class="d-lg-none d-flex">
               <div class="p-2"><img src="/img/c1.png"  class="footer-img " alt=""></div>
-              <div class="p-2"><img src="/img/c4.png"  class="footer-img " alt=""></div>
+              <div class="p-2"><img src="/img/c3.png"  class="footer-img " alt=""></div>
               </div>
             <div class="d-lg-none d-flex">
             <div class="p-2"><img src="/img/c2.png"  class="footer-img " alt=""></div>
-              <div class="p-2"><img src="/img/c3.png"  class="footer-img " alt=""></div>
+              <div class="p-2"><img src="/img/c4.png"  class="footer-img " alt=""></div>
             </div>
           </div>
         </div>
