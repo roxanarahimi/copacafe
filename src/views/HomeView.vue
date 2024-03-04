@@ -30,7 +30,7 @@
         </div>
 
       </div>
-      <a class="navbar-brand m-0 text-center d-lg-none w-100 position-absolute top-0 right-0 pt-3">
+      <a class="navbar-brand m-0 text-center d-lg-none w-100 position-absolute top-0 right-0 pt-2">
       <img src="/img/logo.png" class="mx-auto" width="100px" alt="">
     </a>
     </nav>
