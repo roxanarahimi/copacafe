@@ -3,9 +3,10 @@
     <nav class="navbar navbar-expand-lg  pt-4">
       <div class="container-fluid">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="navbar-toggler border-0"  data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" style="z-index: 1000; cursor: pointer">
+          <i class="bi bi-list"></i>
+        </div>
         <div class="collapse navbar-collapse pt-4" id="navbarScroll">
           <ul class="navbar-nav ms-auto mb-0 my-lg-0 navbar-nav-scroll">
             <li class="nav-item">
@@ -15,7 +16,7 @@
               <a class="nav-link" href="#">محصولات</a>
             </li>
           </ul>
-          <a class="navbar-brand mx-0 text-center d-block d-lg-inline-block">
+          <a class="navbar-brand mx-0 text-center d-block d-none d-lg-inline-block">
             <img src="/img/logo.png" class="mx-auto" width="150px" alt="">
           </a>
           <ul class="navbar-nav me-auto mb-0 my-lg-0 navbar-nav-scroll">
@@ -27,7 +28,11 @@
             </li>
           </ul>
         </div>
+
       </div>
+      <a class="navbar-brand m-0 text-center d-lg-none w-100 position-absolute top-0 right-0 pt-3">
+      <img src="/img/logo.png" class="mx-auto" width="100px" alt="">
+    </a>
     </nav>
   </div>
   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-pause="false" style="height: calc(100vh - 103px); margin-top:103px;">
@@ -52,7 +57,6 @@
             </div>
           </div>
         </div>
-
       </div>
       <div class="carousel-item px-3 h-100" data-bs-interval="3000">
         <div class="row justify-content-center h-100">
