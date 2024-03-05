@@ -15,7 +15,7 @@
               <div class="nav-link"  @click="scrollTo('products')">محصولات</div>
             </li>
           </ul>
-          <div class="navbar-brand mx-0 text-center d-block d-none d-lg-inline-block">
+          <div class="navbar-brand mx-0 text-center d-block d-none d-lg-inline-block cursor-pointer" @click="scrollTo('home')">
             <img src="/img/logo.png" class="mx-auto" width="150px" alt="">
           </div>
           <ul class="navbar-nav me-auto mb-0 my-lg-0 navbar-nav-scroll">
@@ -28,7 +28,7 @@
           </ul>
         </div>
       </div>
-      <div class="navbar-brand m-0 text-center d-lg-none w-100 position-absolute top-0 right-0 pt-2">
+      <div class="navbar-brand m-0 text-center d-lg-none w-100 position-absolute top-0 right-0 pt-2 cursor-pointer" @click="scrollTo('home')">
         <img src="/img/logo.png" class="mx-auto" width="100px" alt="">
       </div>
     </nav>

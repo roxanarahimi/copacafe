@@ -9,13 +9,16 @@ body, html {
 }
 
 * {
-    transition: all 0.5s ease !important;
+    transition: all 0.3s ease !important;
 }
 
 body {
 
     overflow-x: hidden;
     margin: 0 auto;
+}
+.cursor-pointer{
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -64,21 +67,30 @@ body {
     }
 }
 
-
+.card{
+    border-color: #e5e5e5;
+}
 .category {
     color: #004400;
     /*background-color: whitesmoke;*/
     width: 50px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 20px;
     line-height: 50px;
     text-align: center;
+    cursor: pointer;
+    padding:3px;
 }
-
-.my-bg {
+.category-inner{
+    background-color: #e2e2e2
+}
+.my-bg,.category-active {
     background-color: #004400 !important;
     color: white !important;
+}
+.my-border, .product-active {
+    border: 1px solid #004400 ;
 }
 
 .my-bg a, .my-bg a:hover {
@@ -126,6 +138,13 @@ nav ul li div {
     height: calc(100vh - 62px);
     margin-top: 62px;
 }
+.products-container{
+    overflow-x: scroll;
+}
+.products-inner{
+    min-width: 100%;
+    display: flex;
+}
 
 @media (min-width: 992px) {
     .navbar-brand {
@@ -139,4 +158,15 @@ nav ul li div {
         height: calc(100vh - 103px);
         margin-top: 103px;
     }
+    .products-container{
+        overflow-x: hidden;
+    }
+    .products-inner{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+p{
+    margin-bottom: 0 !important;
 }
