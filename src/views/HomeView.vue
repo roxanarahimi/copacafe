@@ -213,7 +213,7 @@
     <div class="row d-grid">
       <div class="col-10 row align-self-center mx-auto">
         <div class="col-lg-6">
-          <img src="/img/bigcup.png" class="img-fluid" alt="">
+          <img src="/img/cup.png" class="img-fluid" alt="">
         </div>
         <div class="col-lg-6 d-grid">
           <div class="align-self-end">
