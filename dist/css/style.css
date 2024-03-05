@@ -11,11 +11,13 @@ body, html {
 * {
     transition: all 0.5s ease !important;
 }
+
 body {
 
     overflow-x: hidden;
     margin: 0 auto;
 }
+
 ::-webkit-scrollbar {
     width: 5px;
     cursor: pointer !important;
@@ -44,15 +46,18 @@ body {
     cursor: pointer !important;
 
 }
-@media(max-width: 700px) {
+
+@media (max-width: 700px) {
     ::-webkit-scrollbar {
         width: 0 !important;
         background: transparent !important;
     }
+
     /* Handle */
     ::-webkit-scrollbar-thumb {
         background: transparent !important;
     }
+
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
         background: transparent !important;
@@ -60,50 +65,78 @@ body {
 }
 
 
-
-.category{
+.category {
     color: #004400;
     /*background-color: whitesmoke;*/
     width: 50px;
-    height:50px;
+    height: 50px;
     border-radius: 10px;
     font-size: 20px;
     line-height: 50px;
     text-align: center;
 }
-.my-bg{
+
+.my-bg {
     background-color: #004400 !important;
     color: white !important;
 }
-.my-bg a,.my-bg a:hover{
+
+.my-bg a, .my-bg a:hover {
     text-decoration: none;
     color: white !important;
 }
-.my-color{
+
+.my-color {
     color: #004400 !important;
 }
-.carousel-text{
+
+.carousel-text {
     font-size: 45px
 }
-.text-justify{
+
+.text-justify {
     text-align: justify;
 }
-.footer-img{
+
+.footer-img {
     width: 85%;
     height: auto;
 
-    cursor:pointer;
+    cursor: pointer;
 }
-.footer-img:hover{
-    transform: scale(1.2,1.2);
+
+.footer-img:hover {
+    transform: scale(1.2, 1.2);
     opacity: 0.7;
 }
-nav ul li a {
+
+nav ul li div {
     text-align: center !important;
     font-weight: bold !important;
+    color: black !important;
+    cursor: pointer;
+
 }
+
+.scrollElement {
+    scroll-margin: 62px !important;
+}
+
+#home {
+    height: calc(100vh - 62px);
+    margin-top: 62px;
+}
+
 @media (min-width: 992px) {
-    .navbar-brand{
+    .navbar-brand {
         margin-top: -40px;
+    }
+
+    .scrollElement {
+        scroll-margin: 103px !important;
+    }
+    #home {
+        height: calc(100vh - 103px);
+        margin-top: 103px;
     }
 }
