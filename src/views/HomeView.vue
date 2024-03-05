@@ -41,7 +41,7 @@
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     </div>
     <div class="carousel-inner h-100">
-      <div class="carousel-item px-3 active h-100" data-bs-interval="3000">
+      <div class="carousel-item px-lg-3 active h-100" data-bs-interval="3000">
         <div class="row align-self-center d-none d-lg-flex flex-row-reverse h-100">
           <div class="col-lg-7 h-100 d-grid">
             <img src="/img/slide1.png" class="img-fluid align-self-center me-auto" alt="">
@@ -59,7 +59,7 @@
             <img src="/img/slide1.png" class="img-fluid align-self-center me-auto" alt="">
           </div>
           <div class="col-12 d-grid"  >
-            <div class="carousel-text align-self-end text-light  fw-bolder mt-4 pb-5" style="font-size:35px">
+            <div class="carousel-text align-self-end text-light  fw-bolder mt-4 pb-5 mb-5" style="font-size:35px">
               <p class="ps-4">کوپاکافه</p>
               <p class="ps-4">طعم واقعی قهوه</p>
             </div>
@@ -68,13 +68,13 @@
         </div>
 
       </div>
-      <div class="carousel-item px-3 h-100" data-bs-interval="3000">
+      <div class="carousel-item px-lg-3 h-100" data-bs-interval="3000">
         <div class="row align-self-center d-none d-lg-flex flex-row-reverse h-100">
           <div class="col-lg-7 h-100 d-grid">
             <img src="/img/slide2.png" class="img-fluid align-self-center me-auto" alt="">
           </div>
           <div class="col-lg-5 h-100 d-grid"  style="background:url('/img/slideBg.png') top right no-repeat; background-size: 100%">
-            <div class="carousel-text align-self-center text-light  fw-bolder mt-4">
+            <div class="carousel-text align-self-center text-light pb-5  fw-bolder mt-4">
               <p class="ps-4">کوپاکافه</p>
               <p class="ps-4">دنیای تنوع و کیفیت</p>
             </div>
@@ -86,7 +86,7 @@
             <img src="/img/slide1.png" class="img-fluid align-self-center me-auto" alt="">
           </div>
           <div class="col-12 d-grid"  >
-            <div class="carousel-text align-self-end text-light  fw-bolder mt-4 pb-5" style="font-size:35px">
+            <div class="carousel-text align-self-end text-light  fw-bolder mt-4 mb-5 pb-5" style="font-size:35px">
               <p class="ps-4">کوپاکافه</p>
               <p class="ps-4">دنیای تنوع و کیفیت</p>
             </div>
@@ -116,7 +116,7 @@
     <div class="row col-10  ">
       <div class="d-none d-lg-block col-5"></div>
       <div class="row mb-5 px-2 col-lg-7 flex-row-reverse">
-        <div class="col-lg-8 p-0 d-flex justify-content-between mb-4 mb-lg-0">
+        <div class="col-lg-8 p-0 d-flex justify-content-between mb-4 px-lg-4 mb-lg-0">
           <div v-for="(index,item) in 5" :key="index" class="category " style="padding:3px; border: 1px #004400 solid">
             <div :class="{'my-bg': index == 1} " class="w-100 h-100 rounded " style=" background-color: #e2e2e2">
               <i class="bi bi-cup-hot"></i>
@@ -124,7 +124,7 @@
           </div>
         </div>
         <div class="col-lg-4 d-grid">
-        <p class="align-self-end m-0 ms-3">قهوه فوری</p>
+        <p class="align-self-end m-0 ">قهوه فوری</p>
       </div>
 
       </div>
