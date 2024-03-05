@@ -28,14 +28,13 @@
             </li>
           </ul>
         </div>
-
       </div>
       <a class="navbar-brand m-0 text-center d-lg-none w-100 position-absolute top-0 right-0 pt-2">
       <img src="/img/logo.png" class="mx-auto" width="100px" alt="">
     </a>
     </nav>
   </div>
-  <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel" data-bs-pause="false" style="height: calc(100vh - 103px); margin-top:103px;">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-pause="false" style="height: calc(100vh - 103px); margin-top:103px;">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -44,7 +43,7 @@
       <div class="carousel-item px-lg-3 active h-100" data-bs-interval="3000">
         <div class="row align-self-center d-none d-lg-flex flex-row-reverse h-100">
           <div class="col-lg-7 h-100 d-grid">
-            <img src="/img/slide1.png" class="img-fluid align-self-center me-auto" alt="">
+            <img src="/img/slide1.png" class="img-fluid align-self-center" alt="">
           </div>
           <div class="col-lg-5 h-100 d-grid"  style="background:url('/img/slideBg.png') top right no-repeat; background-size: 100%">
             <div class="carousel-text align-self-center text-light  fw-bolder mt-4">
@@ -52,21 +51,18 @@
               <p class="ps-4">طعم واقعی قهوه</p>
             </div>
           </div>
-
         </div>
-        <div class="row align-self-center d-lg-none h-100" style="background:url('/img/slideBg2.png') bottom right no-repeat; background-size: 100%;">
+        <div class="row align-self-center d-lg-none h-100 p-2" style="background:url('/img/slideBg2.png') bottom right no-repeat; background-size: 100%;">
           <div class="col-12 d-grid">
             <img src="/img/slide1.png" class="img-fluid align-self-center me-auto" alt="">
           </div>
-          <div class="col-12 d-grid"  >
+          <div class="col-12 d-grid">
             <div class="carousel-text align-self-end text-light  fw-bolder mt-4 pb-5 mb-5" style="font-size:35px">
               <p class="ps-4">کوپاکافه</p>
               <p class="ps-4">طعم واقعی قهوه</p>
             </div>
           </div>
-
         </div>
-
       </div>
       <div class="carousel-item px-lg-3 h-100" data-bs-interval="3000">
         <div class="row align-self-center d-none d-lg-flex flex-row-reverse h-100">
@@ -81,9 +77,9 @@
           </div>
 
         </div>
-        <div class="row align-self-center d-lg-none h-100" style="background:url('/img/slideBg2.png') bottom right no-repeat; background-size: 100%;">
+        <div class="row align-self-center d-lg-none h-100 p-2" style="background:url('/img/slideBg2.png') bottom right no-repeat; background-size: 100%;">
           <div class="col-12 d-grid">
-            <img src="/img/slide1.png" class="img-fluid align-self-center me-auto" alt="">
+            <img src="/img/slide2.png" class="img-fluid align-self-center" alt="">
           </div>
           <div class="col-12 d-grid"  >
             <div class="carousel-text align-self-end text-light  fw-bolder mt-4 mb-5 pb-5" style="font-size:35px">
@@ -183,7 +179,7 @@
     </div>
 
   </div>
-  <div class=" py-5 my-bg " style="margin-top: 100px; margin-bottom: 150px">
+  <div class="coffee py-5 my-bg " style="margin-top: 100px; margin-bottom: 150px">
     <div class="row d-grid">
       <div class="col-10 row align-self-center mx-auto flex-row-reverse">
         <div class="col-lg-6">
@@ -209,7 +205,7 @@
     </div>
 
   </div>
-  <div class=" my-5">
+  <div class="about my-5">
     <div class="row d-grid">
       <div class="col-10 row align-self-center mx-auto">
         <div class="col-lg-6">
@@ -347,12 +343,12 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+
   }
 }
 </script>
