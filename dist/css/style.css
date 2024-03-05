@@ -170,3 +170,6 @@ nav ul li div {
 p{
     margin-bottom: 0 !important;
 }
+.carousel-control-prev, .carousel-control-next{
+    z-index: 2000 !important;
+}
