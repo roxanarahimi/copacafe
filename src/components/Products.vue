@@ -95,7 +95,8 @@ export default {
   setup() {
     const store = useStore();
     const url = store.state.panelUrl;
-    const products = computed(() => store.state.products);
+    // const products = computed(() => store.state.products);
+    const products = ref([]);
     const productsCats = computed(() => store.state.productsCats);
     // const categoryTitle= ref('');
 
@@ -109,7 +110,8 @@ export default {
         },1000)
       })
       promise.then(() => {
-        getData(productsCats.value[0].id);
+        // getData(productsCats.value[0].id);
+        products.value = productsCats.value[0].products;
         product.value = productsCats.value[0].products[0];
       }).catch((err) => { console.error(err);});
 
@@ -124,14 +126,15 @@ export default {
     const categoryToggle = (category, index) => {
       document.querySelector('.category-active').classList.remove('category-active');
       document.querySelector('#cat' + index).classList.add('category-active');
-      getData(category.id);
+      // getData(category.id);
+      products.value = category.products;
       // categoryTitle.value = category.title;
       setTimeout(() => {
         productToggle(category.products[0], 0);
       }, 300)
     }
     const productToggle = (item, index) => {
-      document.querySelector('.product-active').classList.remove('product-active');
+      document.querySelector('.product-active')?.classList.remove('product-active');
       document.querySelector('#product' + index).classList.add('product-active');
       product.value = item;
       activeProductImgToggle(1)
