@@ -1,9 +1,8 @@
 <template>
   <div id="home" class="scrollElement">
-    <div v-if="data?.length" class="carousel carousel-dark slide h-100" data-bs-ride="carousel" data-bs-pause="false">
+    <div id="slider" v-if="data?.length" class="carousel carousel-dark slide h-100" data-bs-ride="carousel" data-bs-pause="false">
       <div class="carousel-indicators">
-        <button v-for="(item,index) in data" :key="index" type="button" data-bs-target="#home" :data-bs-slide-to="index"
-                :class="{'active': index == 0}" aria-current="true" :aria-label="'Slide '+index"></button>
+        <button v-for="(item,index) in data" :key="index" type="button" data-bs-target="#slider" :data-bs-slide-to="index" :class="{'active': index == 0}" aria-current="true" :aria-label="'Slide '+index"></button>
       </div>
       <div class="carousel-inner h-100">
         <div v-for="(item,index) in data" :key="index" class="carousel-item  h-100" :class="{'active': index == 0}" data-bs-interval="3000">
@@ -30,14 +29,13 @@
             </div>
 
           </div>
-
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>

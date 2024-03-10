@@ -59,7 +59,7 @@
                     <img :src="url+product.image1" class="img-fluid" alt="">
                   </div>
                 </div>
-                <div id="active-product-img-2" class="card mx-2 cursor-pointer p-1" @click="activeProductImgToggle(2)" style="width: 100px">
+                <div v-if="product.image2" id="active-product-img-2" class="card mx-2 cursor-pointer p-1" @click="activeProductImgToggle(2)" style="width: 100px">
                   <div class="card-img">
                     <img :src="url+product.image2" class="img-fluid" alt="">
                   </div>
