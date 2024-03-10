@@ -8,8 +8,9 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^3.2.13",
+    "vue": "^3.4.21",
     "vue-router": "^4.0.3",
+    "vue-template-compiler": "^2.7.16",
     "vuex": "^4.0.0"
   },
   "devDependencies": {

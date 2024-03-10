@@ -3,10 +3,10 @@
     <img src="/img/coffee1.png" class="w-100" alt="">
     <div class="row d-grid ">
       <div class="col-10 row align-self-center mx-auto flex-row-reverse">
-        <div class="col-lg-6">
+        <div class="col-lg-5">
           <img src="/img/make.png" class="img-fluid" alt="">
         </div>
-        <div class="col-lg-6 d-grid">
+        <div class="col-lg-7 d-grid pb-3">
           <div class="align-self-end">
             <h3 class="text-center my-5">راهنمای دم آوری قهوه</h3>
             <p class="text-justify px-lg-5">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
