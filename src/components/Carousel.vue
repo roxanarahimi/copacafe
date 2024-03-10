@@ -45,7 +45,7 @@
 
 <script>
 import {useStore} from "vuex";
-import {computed, onBeforeMount, onMounted} from "vue";
+import {computed, onBeforeMount} from "vue";
 
 export default {
   name: "Carousel",
@@ -55,9 +55,9 @@ export default {
     const getData = () => {
       store.commit('getSlides');
     };
-    onMounted(()=>{
+    onBeforeMount(()=>{
       getData();
-    })
+    });
 
     return{
       data: computed(()=>store.state.slides),

@@ -16,8 +16,8 @@
           <div class="row px-0 mx-0 ">
             <div class="row px-0 mx-0 flex-row-reverse mb-5">
               <div class="col-lg-7 p-0 d-flex justify-content-between mb-4 px-lg-4 mb-lg-0">
-                <div v-for="(index,item) in 5" :key="index" class="category my-border">
-                  <div  :id="'cat'+index" class="w-100 h-100 rounded category-inner" :class="{'category-active': index == 1} " @click="categoryToggle(index)">
+                <div v-for="(item,index) in productsCats" :key="index" class="category my-border">
+                  <div  :id="'cat'+index" class="w-100 h-100 rounded category-inner" :title="item.title" :class="{'category-active': index == 0} " @click="categoryToggle(item,index)">
                     <i class="bi bi-cup-hot"></i>
                   </div>
                 </div>
@@ -29,15 +29,16 @@
           </div>
           <div class="products-container">
             <div class="px-0 mx-0 products-inner">
-              <div v-for="(index,item) in 6" :key="index" class="col-6 col-lg-4 px-1 px-lg-3 mb-4">
-                <div class="card rounded-4 cursor-pointer product-card" :id="'product'+index" :class="{'product-active': index == 1}" @click="productToggle(index)">
+              <div v-for="(item,index) in products" :key="index" class="col-6 col-lg-4 px-1 px-lg-3 mb-4">
+                <div class="card rounded-4 cursor-pointer product-card" :id="'product'+index" :class="{'product-active': index == 0}" @click="productToggle(item,index)">
                   <div class="card-body pt-lg-5">
-                    <div class="card-img mb-3">
-                      <img src="/img/cc.webp" class="img-fluid" alt="">
+                    <div class="product-card-img card-img mb-3">
+                      <img :src="url+item.image1" class="img1 img-fluid" alt="">
+                      <img v-if="item.image2" :src="url+item.image2" class="img2 img-fluid d-none" alt="">
                     </div>
                     <div class="card-title">
-                      <p class="mb-lg-2">قهوه فوری</p>
-                      <small>بسته 500 گرمی</small>
+                      <p class="mb-lg-2">{{ item.title }}</p>
+                      <small>{{ item.subTitle }}</small>
                     </div>
                   </div>
                 </div>
@@ -46,14 +47,17 @@
           </div>
         </div>
         <div class="col-lg-5">
-          <div class="card border-0 rounded-4  mt-lg-5 pt-lg-4">
+          <div v-if="product" class="card border-0 rounded-4  mt-lg-5 pt-lg-4">
             <div class="card-body">
               <div class="card-img mb-3">
-                <img src="/img/cc.webp" class="img-fluid" alt="">
+                <img :src="url+product.image1" class="img-fluid" alt="">
               </div>
               <div class="card-title">
-                <h3>قهوه فوری</h3>
-                <h5>بسته 500 گرمی</h5>
+                <h3>{{ product.title }}</h3>
+                <h5>{{ product.subTitle }}</h5>
+                <p>
+                  {{ product.text }}
+                </p>
               </div>
             </div>
           </div>
@@ -67,26 +71,61 @@
 </template>
 
 <script>
+import {useStore} from "vuex";
+import {computed, onBeforeMount, ref} from "vue";
 export default {
   name: "Products",
   setup(){
-    const categoryToggle = (index)=>{
+    const store = useStore();
+    const url = store.state.panelUrl;
+    const products = computed(()=>store.state.products);
+    const productsCats= computed(()=>store.state.productsCats);
+
+    const product = ref({});
+    const getCategories = () => {
+      store.commit('getProductCats');
+    };
+    const getData = (id) => {
+      store.commit('getProducts', id);
+    };
+    onBeforeMount(() => {
+      getCategories();
+
+      setTimeout(()=>{
+        getData(productsCats.value[0].id);
+        product.value = productsCats.value[0].products[0];
+      },1000)
+
+    });
+    const categoryToggle = (category,index)=>{
       document.querySelector('.category-active').classList.remove('category-active');
       document.querySelector('#cat'+index).classList.add('category-active');
-      productToggle(1);
+      getData(category.id);
+      setTimeout(()=>{
+        productToggle(category.products[0],0);
+      },300)
     }
-    const productToggle = (index)=>{
+    const productToggle = (item,index)=>{
       document.querySelector('.product-active').classList.remove('product-active');
       document.querySelector('#product'+index).classList.add('product-active');
+        product.value = item;
     }
 
     return{
-      categoryToggle,productToggle,
+      products,
+      productsCats,
+      getData, getCategories,store,url,
+      categoryToggle,productToggle, product,
     }
   }
 }
 </script>
 
 <style scoped>
-
+.product-card-img:hover .img1{
+  display: none !important;
+}
+.product-card-img:hover .img2{
+  display: block !important;
+}
 </style>
