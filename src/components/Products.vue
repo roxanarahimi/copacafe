@@ -13,7 +13,7 @@
 
 
         <div class="col-lg-7  px-4 px-lg-0">
-          <div class="row px-0 mx-0 ">
+          <div class="row px-0 mx-0 " v-if="productsCats">
             <div class="row px-0 mx-0 flex-row-reverse mb-5">
               <div class="col-lg-12 p-0 d-flex justify-content-between mb-4 px-lg-4 mb-lg-0">
                 <div v-for="(item,index) in productsCats" :key="index" class="category my-border mx-1 mx-lg-0">
@@ -97,17 +97,25 @@ export default {
     const product = ref({});
     const getCategories = () => {
       store.commit('getProductCats');
+
+    setTimeout(()=>{
+      getData(productsCats.value[0].id);
+      product.value = productsCats.value[0].products[0];
+
+    },1000)
+
     };
     const getData = (id) => {
       store.commit('getProducts', id);
     };
     onBeforeMount(() => {
       getCategories();
-      setTimeout(()=>{
-        getData(productsCats.value[0].id);
-        // categoryTitle.value = productsCats.value[0].title;
-        product.value = productsCats.value[0].products[0];
-      },1000)
+      // setTimeout(()=>{
+      //   getData(productsCats.value[0]?.id);
+      //   product.value = productsCats.value[0].products[0];
+      //   // categoryTitle.value = productsCats.value[0].title;
+      //
+      // },1200)
 
     });
     const categoryToggle = (category,index)=>{
