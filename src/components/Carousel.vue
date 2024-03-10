@@ -48,6 +48,8 @@
 import {useStore} from "vuex";
 import {computed, onBeforeMount} from "vue";
 
+const {onMounted} = require("vue");
+
 export default {
   name: "Carousel",
   setup() {
@@ -56,7 +58,7 @@ export default {
     const getData = () => {
       store.commit('getSlides');
     };
-    onBeforeMount(() => {
+    onMounted(() => {
       getData();
     });
 
