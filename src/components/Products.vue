@@ -95,11 +95,8 @@ export default {
   setup() {
     const store = useStore();
     const url = store.state.panelUrl;
-    // const products = computed(() => store.state.products);
-    const products = ref([]);
     const productsCats = computed(() => store.state.productsCats);
-    // const categoryTitle= ref('');
-
+    const products = ref([]);
     const product = ref({});
 
     const getCategories = () => {
@@ -107,28 +104,21 @@ export default {
         await store.commit('getProductCats');
         setTimeout(()=>{
           if (productsCats.value != null) {resolve('Success');} else {   reject('Error');}
-        },1000)
+        },1300)
       })
       promise.then(() => {
-        // getData(productsCats.value[0].id);
         products.value = productsCats.value[0].products;
         product.value = productsCats.value[0].products[0];
       }).catch((err) => { console.error(err);});
 
     };
-    const getData = (id) => {
-      store.commit('getProducts', id);
-    };
     onMounted(() => {
       getCategories();
-
     });
     const categoryToggle = (category, index) => {
       document.querySelector('.category-active').classList.remove('category-active');
       document.querySelector('#cat' + index).classList.add('category-active');
-      // getData(category.id);
       products.value = category.products;
-      // categoryTitle.value = category.title;
       setTimeout(() => {
         productToggle(category.products[0], 0);
       }, 300)
@@ -146,11 +136,8 @@ export default {
     }
 
     return {
-      products,
-      productsCats,
-      getData, getCategories, store, url,
+      products, productsCats, getCategories, store, url,
       categoryToggle, productToggle, product, activeProductImgToggle,
-      // categoryTitle
     }
   }
 }

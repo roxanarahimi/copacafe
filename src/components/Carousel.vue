@@ -46,7 +46,7 @@
 
 <script>
 import {useStore} from "vuex";
-import {computed, onBeforeMount} from "vue";
+import {computed} from "vue";
 
 const {onMounted} = require("vue");
 
