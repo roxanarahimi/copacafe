@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="products-container">
-            <div class="px-0 mx-0 products-inner">
+            <div v-if="products" class="px-0 mx-0 products-inner">
               <div v-for="(item,index) in products" :key="index" class="col-6 col-lg-4 px-1 px-lg-3 mb-4">
                 <div class="card rounded-4 cursor-pointer product-card" :id="'product'+index"
                      :class="{'product-active': index == 0}" @click="productToggle(item,index)">
