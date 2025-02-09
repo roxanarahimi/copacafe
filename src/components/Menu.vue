@@ -54,5 +54,10 @@ export default {
 </script>
 
 <style scoped>
-
+.nav-link{
+  font-size: 16px;
+  font-weight: bolder;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
 </style>

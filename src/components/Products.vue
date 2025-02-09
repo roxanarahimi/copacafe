@@ -1,18 +1,13 @@
 <template>
-  <div id="products" class=" scrollElement row px-0 mx-0 justify-content-center min-vh-100" style="padding-top: 70px">
-
-    <div class="text-center mb-5">
+  <div id="products" class=" scrollElement row px-0 mx-0 justify-content-center" style="padding-top: 70px">
+    <div class="col-12 text-center mb-5" style="height: 106px">
       <div class="rounded-3 d-inline-block p-1 my-border">
         <h1 class="my-bg d-inline-block mx-auto p-4 rounded-3 mb-0">محصولات کوپاکافه</h1>
       </div>
-
     </div>
-    <div class="row col-lg-11 px-0 mx-0">
-
-      <div class="row px-0 mx-0 flex-row-reverse">
-
-
-        <div class="col-lg-7  px-4 px-lg-0">
+    <div class="col-lg-11 px-0 mx-0 align-self-start">
+      <div class="row px-0 mx-0 flex-row-reverse" style="min-height: 70vh">
+        <div class="col-lg-7 px-2 px-lg-0 " >
           <div class="row px-0 mx-0 " v-if="productsCats">
             <div class="row px-0 mx-0 flex-row-reverse mb-5">
               <div class="col-lg-12 p-0 d-flex justify-content-between mb-4 px-lg-4 mb-lg-0">
@@ -79,10 +74,8 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
   </div>
 </template>
 
@@ -116,23 +109,28 @@ export default {
       getCategories();
     });
     const categoryToggle = (category, index) => {
-      document.querySelector('.category-active').classList.remove('category-active');
-      document.querySelector('#cat' + index).classList.add('category-active');
+      document.querySelector('.category-active')?.classList.remove('category-active');
+      document.querySelector('#cat' + index)?.classList.add('category-active');
       products.value = category.products;
-      setTimeout(() => {
-        productToggle(category.products[0], 0);
-      }, 300)
+      if (category.products.length){
+        setTimeout(() => {
+          productToggle(category.products[0], 0);
+        }, 300)
+      }else{
+        product.value = null;
+      }
+
     }
     const productToggle = (item, index) => {
       document.querySelector('.product-active')?.classList.remove('product-active');
-      document.querySelector('#product' + index).classList.add('product-active');
+      document.querySelector('#product' + index)?.classList.add('product-active');
       product.value = item;
       activeProductImgToggle(1)
     }
     const activeProductImgToggle = (index) => {
-      document.querySelector('.active-product-img-active ').classList.remove('active-product-img-active');
-      document.querySelector('#active-product-img-' + index).classList.add('active-product-img-active');
-      document.querySelector('#active-product-img').setAttribute('src', url + product.value['image' + index]);
+      document.querySelector('.active-product-img-active ')?.classList.remove('active-product-img-active');
+      document.querySelector('#active-product-img-' + index)?.classList.add('active-product-img-active');
+      document.querySelector('#active-product-img')?.setAttribute('src', url + product.value['image' + index]);
     }
 
     return {

@@ -1,21 +1,12 @@
 <template>
   <footer id="contact" class=" scrollElement" style="margin-top: 120px !important; ">
-    <div class="my-bg " style=" background: url('/img/footer.png') top left no-repeat; background-size: 100% ;padding-bottom: 50px">
+    <div class="my-bg "
+         style=" background: url('/img/footer.png') top left no-repeat; background-size: 100% ;padding-bottom: 50px">
 
-      <div class="px-lg-5" style=" padding-top: 100px">
-        <div class="row px-5 ">
-          <div class="col-xl-7 row mb-4">
-            <div class="col-sm-6 col-xl-5 px-3">
-
-              <div class="text-center mb-4">
-                <img src="/img/logo.png" width="200px">
-              </div>
-              <small class="d-block text-justify">
-                برند الیت در سال ۱۳۸۴ به ثبت رسید و برند اصلی شرکت آماده لذیذ است. عصاره ، نودالیت و سوپ های نیمه آماده
-                جزو اولین محصولات تولید شده توسط الیت می‌باشند. محصولات ترین استاندارد های مواد غذایی دنیا تولید می‌شود.
-              </small>
-            </div>
-            <div class="col-sm-6 col-xl-7 px-lg-3" style="margin-top: 80px">
+      <div class="px-lg-5 ftr" style=" padding-top: 100px">
+        <div class="row px-5 justify-content-xl-between">
+          <div class="col-lg-5 col-xl-5 row mb-4">
+            <div class="col-12 px-lg-3 ftr-i" style="">
               <p class="text-center mb-4"><b>تماس با ما</b></p>
 
               <ul class="p-0">
@@ -36,15 +27,25 @@
                 </li>
                 <li class="d-flex mb-3">
             <span class="me-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone"
-                   viewBox="0 0 16 16">
-                <path
-                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
               </svg>
            </span>
 
                   <small dir="ltr">
-                    <a href="tel:+982141638699">+98 21 41638699</a>
+                    <a href="tel:+982636670558">+98 26 36670558</a>
+
+                  </small>
+                </li>
+                <li class="d-flex mb-3">
+            <span class="me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg>
+           </span>
+
+                  <small dir="ltr">
+                    <a href="tel:+982141638000">+98 21 41638000</a>
 
                   </small>
                 </li>
@@ -73,20 +74,20 @@
               </ul>
             </div>
           </div>
-          <div class="col-sm-5 col-xl-5 px-3 d-grid">
-            <div class=" justify-content-between align-self-end d-none d-lg-flex">
-              <div><img src="/img/c1.png"  class="footer-img" alt=""></div>
-              <div><img src="/img/c2.png"  class="footer-img" alt=""></div>
-              <div><img src="/img/c4.png"  class="footer-img" alt=""></div>
-              <div><img src="/img/c3.png"  class="footer-img" alt=""></div>
+          <div class="col-lg-7 col-xl-6 px-3 d-grid">
+            <div class=" justify-content-between align-self-end d-none d-md-flex">
+              <div><img src="/img/c1.png" class="footer-img" alt=""></div>
+              <div><img src="/img/c2.png" class="footer-img" alt=""></div>
+              <div><img src="/img/c4.png" class="footer-img" alt=""></div>
+              <div><img src="/img/c3.png" class="footer-img" alt=""></div>
             </div>
-            <div class="d-lg-none d-flex">
-              <div class="p-2"><img src="/img/c1.png"  class="footer-img " alt=""></div>
-              <div class="p-2"><img src="/img/c3.png"  class="footer-img " alt=""></div>
+            <div class="d-md-none d-flex">
+              <div class="p-2"><img src="/img/c1.png" class="footer-img " alt=""></div>
+              <div class="p-2"><img src="/img/c3.png" class="footer-img " alt=""></div>
             </div>
-            <div class="d-lg-none d-flex">
-              <div class="p-2"><img src="/img/c2.png"  class="footer-img " alt=""></div>
-              <div class="p-2"><img src="/img/c4.png"  class="footer-img " alt=""></div>
+            <div class="d-md-none d-flex">
+              <div class="p-2"><img src="/img/c2.png" class="footer-img " alt=""></div>
+              <div class="p-2"><img src="/img/c4.png" class="footer-img " alt=""></div>
             </div>
           </div>
         </div>
