@@ -37,18 +37,18 @@
                           <img src="/img/loader.svg" class="w-100 loader">
                         </div>
                         <img :id="'product_'+item.id+'_image1'" class="img-fluid" alt=""
-                             :src="url+item.image1"
+                             :src="url+item.thumb1"
                              v-show="item.image1Loaded && item.image1Loaded === true"
                              @load="onImageLoad(item,1)"
                              style="display: none;">
                       </div>
-                      <div v-if="item.image2" class="img2 d-none">
+                      <div v-if="item.thumb2" class="img2 d-none">
                         <div v-show="!item.image2Loaded" class="w-100 position-relative">
                           <img src="/img/copacafe.png" class="w-100" alt="copacafe">
                           <img src="/img/loader.svg" class="w-100 loader">
                         </div>
                         <img :id="'product_'+item.id+'_image2'" class="img-fluid" alt=""
-                             :src="url+item.image2"
+                             :src="url+item.thumb2"
                              v-show="item.image2Loaded && item.image2Loaded === true"
                              @load="onImageLoad(item,2)"
                              style="display: none;">
@@ -70,13 +70,13 @@
           <div v-if="product" class="card border-0 rounded-4  mt-lg-5 pt-lg-4">
             <div class="card-body">
               <div class="card-img text-center ">
-<!--                <img id="active-product-img" :src="url+product.image1" class="img-fluid" alt="">-->
+                <!--                <img id="active-product-img" :src="url+product.image1" class="img-fluid" alt="">-->
                 <div class="img1">
                   <div v-show="!activePImage1Loaded" class="w-100 position-relative">
                     <img src="/img/copacafe.png" class="w-100" alt="copacafe">
                     <img src="/img/loader.svg" class="w-100 loader">
                   </div>
-                  <img id="active-product-img"  class="img-fluid" alt=""
+                  <img id="active-product-img" class="w-100" alt=""
                        :src="url+product.image1"
                        v-show="activePImage1Loaded"
                        @load="activePImage1Loaded=true"
@@ -87,13 +87,13 @@
                 <div id="active-product-img-1" class="card mx-2 cursor-pointer active-product-img-active p-1 "
                      @click="activeProductImgToggle(1)" style="width: 100px">
                   <div class="card-img">
-                    <img :src="url+product.image1" class="img-fluid" alt="">
+                    <img :src="url+product.thumb1" class="w-100" alt="">
                   </div>
                 </div>
-                <div v-if="product.image2" id="active-product-img-2" class="card mx-2 cursor-pointer p-1"
+                <div v-if="product.thumb2" id="active-product-img-2" class="card mx-2 cursor-pointer p-1"
                      @click="activeProductImgToggle(2)" style="width: 100px">
                   <div class="card-img">
-                    <img :src="url+product.image2" class="img-fluid" alt="">
+                    <img :src="url+product.thumb2" class="w-100" alt="">
                   </div>
                 </div>
               </div>
@@ -126,38 +126,15 @@ export default {
     const product = ref({});
     const activePImage1Loaded = ref(false);
 
-    // const getCategories = () => {
-    //   // axios.get(url + '/api/category/product')
-    //   //     .then((response) => {
-    //   //       // productsCats.value = response.data;
-    //   //       console.log('rrrr',response.data);
-    //   //     }).catch();
-    //
-    //   let promise = new Promise(  (resolve, reject) => {
-    //     console.log('')
-    //     store.commit('getProductCats');
-    //     // console.log('cc',productsCats.value);
-    //     // setTimeout(()=>{
-    //     console.log('dd',store.state.productsCats);
-    //       if (store.state.productsCats != null) {resolve('Success');} else {   reject('Error');}
-    //     // },3000)
-    //   })
-    //   promise.then(() => {
-    //     products.value = productsCats.value[0].products;
-    //     product.value = productsCats.value[0].products[0];
-    //     console.log('products',products.value);
-    //     console.log('product',product.value);
-    //   }).catch((err) => { console.error(err);});
-    //
-    // };
 
     const getCategories = async () => {
       try {
         await store.dispatch('getProductCats');
-
+        console.log(productsCats.value)
         if (productsCats.value && productsCats.value.length > 0) {
           products.value = productsCats.value[0].products;
           product.value = productsCats.value[0].products[0];
+          // preload();
         } else {
           throw new Error('No categories found');
         }
@@ -183,7 +160,7 @@ export default {
 
     }
     const productToggle = (item, index) => {
-      activePImage1Loaded.value=false;
+      activePImage1Loaded.value = false;
       document.querySelector('.product-active')?.classList.remove('product-active');
       document.querySelector('#product' + index)?.classList.add('product-active');
       product.value = item;
@@ -197,22 +174,44 @@ export default {
       }
     }
 
-    const onImageLoad = (product,i) => {
-      if(i==1){
+    const onImageLoad = (product, i) => {
+      if (i == 1) {
         product.image1Loaded = true;
         // product.image2Loaded = false;
-      }else{
+      } else {
         if (product.image2)
-        product.image2Loaded = true;
+          product.image2Loaded = true;
         // product.image1Loaded = false;
       }
 
 
     }
+    const preload = () => {
+      for (let i = 1; i < productsCats.value.length; i++) {
+        productsCats.value[i].products.forEach(p => {
+          const thmb = new Image();
+          thmb.src = url + p.thumb1;
+          if (p.image2) {
+            const thmb2 = new Image();
+            thmb2.src = url + p.thumb2;
+          }
+        });
+      }
+      for (let i = 1; i < productsCats.value.length; i++) {
+        productsCats.value[i].products.forEach(p => {
+          const img = new Image();
+          img.src = url + p.image1;
+          if (p.image2) {
+            const img2 = new Image();
+            img2.src = url + p.image2;
+          }
+        });
+      }
+    }
     return {
       products, productsCats, getCategories, store, url,
       categoryToggle, productToggle, product, activeProductImgToggle,
-      onImageLoad,activePImage1Loaded
+      onImageLoad, activePImage1Loaded, preload
     }
   }
 }
