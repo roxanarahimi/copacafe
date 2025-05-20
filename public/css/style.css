@@ -51,26 +51,6 @@ body {
 
 }
 
-@media (max-width: 700px) {
-    ::-webkit-scrollbar {
-        height: 5px !important;
-        /*width: 5px !important;*/
-        background: whitesmoke !important;
-    }
-
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-        /*background: transparent !important;*/
-        background: dimgray;
-        border-radius: 5px;
-        cursor: pointer !important;
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: transparent !important;
-    }
-}
 
 .card {
     border-color: #e5e5e5;
@@ -90,7 +70,8 @@ body {
 }
 
 .category-inner {
-    background-color: #e2e2e2
+    background-color: #e2e2e2;
+    white-space: nowrap;
 }
 
 .my-bg, .category-active {
@@ -157,37 +138,6 @@ nav ul li div {
     display: flex;
 }
 
-@media (min-width: 992px) {
-    .navbar-brand {
-        margin-top: -40px;
-    }
-
-    .scrollElement {
-        scroll-margin: 103px !important;
-    }
-
-    #home {
-        /*height: calc(100vh - 103px);*/
-        margin-top: 103px;
-    }
-
-    .products-container {
-        overflow-x: hidden;
-    }
-
-    .products-inner {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    /*.ftr{*/
-    /*    padding-top: 100px;*/
-    /*}*/
-    .ftr-i {
-        margin-top: 80px
-    }
-}
 
 p {
     margin-bottom: 0 !important;
@@ -219,4 +169,66 @@ p {
 .fill-grid {
     display: grid;
     grid-template-rows: 55px
+}
+
+@media (max-width: 700px) {
+    ::-webkit-scrollbar {
+        height: 5px !important;
+        /*width: 5px !important;*/
+        background: whitesmoke !important;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        /*background: transparent !important;*/
+        background: dimgray;
+        border-radius: 5px;
+        cursor: pointer !important;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: transparent !important;
+    }
+
+    .category-inner {
+        font-size: 12px;
+    }
+    .fill-grid {
+        font-size: 14px;
+        grid-template-rows: 70px;
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-brand {
+        margin-top: -40px;
+    }
+
+    .scrollElement {
+        scroll-margin: 103px !important;
+    }
+
+    #home {
+        /*height: calc(100vh - 103px);*/
+        margin-top: 103px;
+    }
+
+    .products-container {
+        overflow-x: hidden;
+    }
+
+    .products-inner {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*.ftr{*/
+    /*    padding-top: 100px;*/
+    /*}*/
+    .ftr-i {
+        margin-top: 80px
+    }
 }
