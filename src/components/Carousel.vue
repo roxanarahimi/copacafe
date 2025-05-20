@@ -33,8 +33,10 @@ export default {
   setup() {
     const store = useStore();
     const url = store.state.panelUrl;
-    const getData = () => {
-      store.commit('getSlides');
+    const getData = async() => {
+      // store.commit('getSlides');
+      await store.dispatch('getProductCats');
+
     };
     onMounted(() => {
       getData();
