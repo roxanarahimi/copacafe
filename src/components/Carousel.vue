@@ -35,7 +35,7 @@ export default {
     const url = store.state.panelUrl;
     const getData = async() => {
       // store.commit('getSlides');
-      await store.dispatch('getProductCats');
+      await store.dispatch('getSlides');
 
     };
     onMounted(() => {
