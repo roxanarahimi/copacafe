@@ -1,7 +1,7 @@
 body, html {
     max-width: 1535px;
     margin: 0 auto;
-    font-family: VazirThin !important;
+    font-family: VazirThinFD !important;
     direction: rtl !important;
     text-align: right !important;
     scroll-behavior: smooth;
@@ -17,7 +17,8 @@ body {
     overflow-x: hidden;
     margin: 0 auto;
 }
-.cursor-pointer{
+
+.cursor-pointer {
     cursor: pointer;
 }
 
@@ -52,13 +53,17 @@ body {
 
 @media (max-width: 700px) {
     ::-webkit-scrollbar {
-        width: 0 !important;
-        background: transparent !important;
+        height: 5px !important;
+        /*width: 5px !important;*/
+        background: whitesmoke !important;
     }
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: transparent !important;
+        /*background: transparent !important;*/
+        background: dimgray;
+        border-radius: 5px;
+        cursor: pointer !important;
     }
 
     /* Handle on hover */
@@ -67,9 +72,10 @@ body {
     }
 }
 
-.card{
+.card {
     border-color: #e5e5e5;
 }
+
 .category {
     color: #004400;
     /*background-color: whitesmoke;*/
@@ -80,17 +86,20 @@ body {
     line-height: 40px;
     text-align: center;
     cursor: pointer;
-    padding:3px;
+    padding: 3px;
 }
-.category-inner{
+
+.category-inner {
     background-color: #e2e2e2
 }
-.my-bg,.category-active {
+
+.my-bg, .category-active {
     background-color: #004400 !important;
     color: white !important;
 }
+
 .my-border, .product-active, .active-product-img-active {
-    border: 1px solid #004400 ;
+    border: 1px solid #004400;
 }
 
 .my-bg a, .my-bg a:hover {
@@ -138,10 +147,12 @@ nav ul li div {
     /*height: calc(100vh - 62px);*/
     margin-top: 62px;
 }
-.products-container{
+
+.products-container {
     overflow-x: scroll;
 }
-.products-inner{
+
+.products-inner {
     min-width: 100%;
     display: flex;
 }
@@ -154,36 +165,43 @@ nav ul li div {
     .scrollElement {
         scroll-margin: 103px !important;
     }
+
     #home {
         /*height: calc(100vh - 103px);*/
         margin-top: 103px;
     }
-    .products-container{
+
+    .products-container {
         overflow-x: hidden;
     }
-    .products-inner{
+
+    .products-inner {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
+
     /*.ftr{*/
     /*    padding-top: 100px;*/
     /*}*/
-    .ftr-i{
+    .ftr-i {
         margin-top: 80px
     }
 }
-p{
+
+p {
     margin-bottom: 0 !important;
 }
-.carousel-control-prev, .carousel-control-next{
+
+.carousel-control-prev, .carousel-control-next {
     z-index: 2000 !important;
 }
-.loader{
+
+.loader {
     animation: rotate 2s infinite linear;
     animation-iteration-count: infinite;
     position: absolute;
-    width:20px !important;
+    width: 20px !important;
     top: calc(50% - 10px);
     right: calc(50% - 10px);
 
@@ -196,4 +214,9 @@ p{
     100% {
         transform: rotate(360deg);
     }
+}
+
+.fill-grid {
+    display: grid;
+    grid-template-rows: 55px
 }

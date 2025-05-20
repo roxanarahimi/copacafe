@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="col-lg-11 px-0 mx-0 align-self-start">
-      <div class="row px-0 mx-0 flex-row-reverse" style="min-height: 70vh">
+      <div class="row  px-0 mx-0 flex-row-reverse" style="min-height: 70vh">
         <div class="col-lg-7 px-2 px-lg-0 ">
           <div class="row px-0 mx-0 " v-if="productsCats">
             <div class="row px-0 mx-0 flex-row-reverse mb-5">
@@ -26,8 +26,8 @@
           </div>
           <div class="products-container">
             <div v-if="products" class="px-0 mx-0 products-inner">
-              <div v-for="(item,index) in products" :key="index" class="col-6 col-lg-4 px-1 px-lg-3 mb-4">
-                <div class="card rounded-4 cursor-pointer product-card" :id="'product'+index"
+              <div v-for="(item,index) in products" :key="index" class="col-6 col-lg-4 px-1 px-lg-4  mb-4">
+                <div class="card rounded-4 cursor-pointer product-card h-100" :id="'product'+index"
                      :class="{'product-active': index == 0}" @click="productToggle(item,index)">
                   <div class="card-body pt-lg-5">
                     <div class="product-card-img card-img mb-3">
@@ -56,9 +56,9 @@
                       <!--                      <img v-if="item.image2" :src="url+item.image2" class="img2 img-fluid d-none" alt="">-->
 
                     </div>
-                    <div class="card-title">
-                      <p class="mb-lg-2">{{ item.title }}</p>
-                      <small>{{ item.subTitle }}</small>
+                    <div class="card-title  fill-grid">
+                      <p class="mb-lg-2 align-self-start">{{ item.title }}</p>
+                      <small class="align-self-end">{{ item.subTitle }}</small>
                     </div>
                   </div>
                 </div>
@@ -68,15 +68,15 @@
         </div>
         <div class="col-lg-5">
           <div v-if="product" class="card border-0 rounded-4  mt-lg-5 pt-lg-4">
-            <div class="card-body">
+            <div class="card-body text-center">
               <div class="card-img text-center ">
                 <!--                <img id="active-product-img" :src="url+product.image1" class="img-fluid" alt="">-->
-                <div class="img1">
+                <div class="text-center">
                   <div v-show="!activePImage1Loaded" class="w-100 position-relative">
                     <img src="/img/copacafe.png" class="w-100" alt="copacafe">
                     <img src="/img/loader.svg" class="w-100 loader">
                   </div>
-                  <img id="active-product-img" class="w-100" alt=""
+                  <img id="active-product-img" class="img-fluid" alt=""
                        :src="url+product.image1"
                        v-show="activePImage1Loaded"
                        @load="activePImage1Loaded=true"
@@ -97,7 +97,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card-title">
+              <div class="card-title text-start mx-auto" style="max-width: fit-content">
                 <h3>{{ product.title }}</h3>
                 <h5>{{ product.subTitle }}</h5>
                 <p>
