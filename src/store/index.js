@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default createStore({
     state: {
-        panelUrl: 'https://panel.copacaffee.webagent.ir',
+        panelUrl: 'https://copacafe.dev-amadeh.ir',
         slides: null,
         productsCats: null,
     },
