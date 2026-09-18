@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default createStore({
     state: {
-        panelUrl: 'https://copacafe.dev-amadeh.ir',
+        panelUrl: 'https://admin.copacafe.co',
         slides: null,
         productsCats: null,
     },
@@ -18,7 +18,7 @@ export default createStore({
     actions: {
         async getSlides({ commit, state }) {
             try {
-                const response = await axios.get(state.panelUrl + '/api/slide');
+                const response = await axios.get(state.panelUrl + '/api/banner');
                 commit('setSlides', response.data);
             } catch (error) {
                 console.error('Error loading slides:', error);

@@ -32,7 +32,7 @@ export default {
   name: "Carousel",
   setup() {
     const store = useStore();
-    const url = store.state.panelUrl;
+    const url = store.state.panelUrl+'/storage/';
     const getData = async() => {
       // store.commit('getSlides');
       await store.dispatch('getSlides');

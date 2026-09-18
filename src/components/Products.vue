@@ -120,7 +120,7 @@ export default {
   name: "Products",
   setup() {
     const store = useStore();
-    const url = store.state.panelUrl;
+    const url = store.state.panelUrl+'/storage/';
     const productsCats = computed(() => store.state.productsCats);
     const products = ref([]);
     const product = ref({});
