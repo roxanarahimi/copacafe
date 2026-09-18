@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse pt-4" id="navbarScroll">
           <ul class="navbar-nav ms-auto mb-0 my-lg-0 navbar-nav-scroll">
             <li class="nav-item">
-              <div class="nav-link" @click="scrollTo('home')">خانه</div>
+              <div class="nav-link" @click="scrollTo('home')">Home</div>
             </li>
             <li class="nav-item">
-              <div class="nav-link"  @click="scrollTo('products')">محصولات</div>
+              <div class="nav-link"  @click="scrollTo('products')">Products</div>
             </li>
           </ul>
           <div class="navbar-brand mx-0 text-center d-block d-none d-lg-inline-block cursor-pointer" @click="scrollTo('home')">
@@ -20,10 +20,10 @@
           </div>
           <ul class="navbar-nav me-auto mb-0 my-lg-0 navbar-nav-scroll">
             <li class="nav-item">
-              <div class="nav-link"  @click="scrollTo('about')" >درباره ما</div>
+              <div class="nav-link"  @click="scrollTo('about')" >About Us </div>
             </li>
             <li class="nav-item">
-              <div class="nav-link"  @click="scrollTo('contact')">تماس با ما</div>
+              <div class="nav-link"  @click="scrollTo('contact')">Contact Us</div>
             </li>
           </ul>
         </div>
@@ -35,7 +35,7 @@
         <img src="/img/logo.png" class="mx-auto" width="100px" alt="">
       </div>
    <div class="px-3 fw-bold en">
-     <router-link to="/en">English</router-link>
+     <router-link to="/">پارسی</router-link>
    </div>
     </nav>
   </div>

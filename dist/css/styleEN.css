@@ -1,9 +1,9 @@
 body, html {
     max-width: 1535px;
     margin: 0 auto;
-    font-family: VazirThinFD !important;
-    direction: rtl !important;
-    text-align: right !important;
+    font-family: "Calibri Light" !important;
+    /*direction: rtl !important;*/
+    /*text-align: right !important;*/
     scroll-behavior: smooth;
     background-color: transparent;
 }
